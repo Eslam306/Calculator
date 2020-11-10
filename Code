@@ -1,0 +1,40 @@
+while True:
+    in1 = input("enter number or stop:  ")
+    
+    if in1 == int:
+        valid = False
+    else:
+        valid = True
+    
+    if in1 == "stop":
+        break
+    elif not in1.isdigit():
+        print("it is a not valid number ")
+        continue
+    else:
+        n1 = int(in1)
+        
+    op = input(" +, -, %, *, /: ")
+    
+    in2 = input(" enter number2 ")
+    if not in2.isdigit():
+        print("not valid number ")
+        continue
+    else:
+        n2 = int(in2)
+    t = 0
+    
+    if op == "+":
+        t = n1 + n2
+    elif op == "*":
+        t = n1 * n2
+    elif op == "%":
+        t = n1 % n2
+    elif op == "-":
+        t = n1 - n2
+    elif op == "/":
+        t = n1 / n2
+    else:
+        print("not a valid operation")
+    
+    print(n1, op, n2, " = ", t)
